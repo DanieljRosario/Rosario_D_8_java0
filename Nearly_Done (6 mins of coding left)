@@ -11,34 +11,41 @@ package drosario_8_java0;
  */
 public class Drosario_8_java0 {
 
+  /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Animal lion = new Animal(12,18.3,12,13);
+        Animal lion = new Animal(14,18.3,12,13);
         Animal fish = new Animal(14,15,16,17);
         lion.Say_Height(lion);
         lion.Say_Age(lion);
+        fish.Say_FHeight(fish);
+        fish.Say_fAge(lion);
         
         
-        
-        
-        
+    
+
     }
     
 }
 class Animal {
 int age; 
  double height;
- int length;
+ String name = null;
  int x;
  int y;
  
  
- public Animal(int age, double height,int length, int x, int y) {
+ public Animal(int age, double height, int x, int y) {
     this.age = age;
     this.height = height;
-    this.length = length;
+    this.name = null;
     this.x = x;
     this.y = y;
      
@@ -61,12 +68,12 @@ int age;
         this.height = height;
     }
 
-    public void getLength() {
-        return length;
+    public String getName() {
+        return name;
     }
 
-    public void setName(int length) {
-        this.length = length;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getX() {
@@ -93,14 +100,21 @@ int age;
         
     }
      public void  Say_Age(Animal lion) {
-         System.out.println("    ");
-         System.out.println("the age of this lion is " + age);
+         System.out.println("");  
+         System.out.println("the age of this lion is "  + age);
          System.out.println("____________________________");               
 }
-      public void  Say_Length(Animal lion) {
-           System.out.println("    ");
-         System.out.println("the age of this lion is " + length);
-         System.out.println("____________________________");       
-          
+         public void  Say_FHeight(Animal fish) {
+             System.out.println("");
+        System.out.println("The height of the fish in feet is "  + height);
+        System.out.println("_______________________________________");
+        
+}
+             public void  Say_fAge(Animal lion) {
+                 
+                 System.out.println("");
+        System.out.println("The height of the lion in feet is "  + height);
+        System.out.println("_______________________________________");
+        
 }
 }
